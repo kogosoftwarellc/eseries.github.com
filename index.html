@@ -4,11 +4,19 @@
   <title>E-Series Resistor Tables</title>
   <meta charset="UTF-8">
   <style>
-  td, th { text-align: left; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 100%; }
+  table { border-collapse: collapse; }
+  th { z-index: 10; }
+  td { z-index: 5; }
+  th { position: -webkit-sticky; position: sticky; top: 0; }
+  th:first-child { left: 0; }
+  td, th { border: 2px solid #fff; text-align: left; }
   td:nth-child(odd)  { background-color: #ffe9ba; }
   tr:nth-child(even) { background-color: #baffcb; }
   tr:nth-child(even) td:nth-child(odd) { background-color: #ddf4c3; }
   tr:nth-child(even) td:nth-child(1), td:nth-child(1), th { background-color: #c4daff; }
+  td:first-child { position: -webkit-sticky; position: sticky; left: 0; }
   </style>
 </head>
 <body>
