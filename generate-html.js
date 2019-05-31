@@ -26,7 +26,7 @@ fs.writeFileSync(path.resolve(__dirname, 'index.html'), `<!DOCTYPE html>
   th { z-index: 10; }
   td { z-index: 5; }
   th { position: -webkit-sticky; position: sticky; top: 0; }
-  th:first-child { left: 0; }
+  th:first-child { left: 0; z-index: 20; }
   td, th { border: 2px solid #fff; text-align: left; }
   td:nth-child(odd)  { background-color: #ffe9ba; }
   tr:nth-child(even) { background-color: #baffcb; }
