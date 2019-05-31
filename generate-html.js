@@ -21,6 +21,10 @@ fs.writeFileSync(path.resolve(__dirname, 'index.html'), `<!DOCTYPE html>
   <meta charset="UTF-8">
   <style>
   td, th { text-align: left; }
+  td:nth-child(odd)  { background-color: #ffe9ba; }
+  tr:nth-child(even) { background-color: #baffcb; }
+  tr:nth-child(even) td:nth-child(odd) { background-color: #ddf4c3; }
+  tr:nth-child(even) td:nth-child(1), td:nth-child(1), th { background-color: #c4daff; }
   </style>
 </head>
 <body>
@@ -38,7 +42,7 @@ ${series.map(count => {
 <tbody>
 ${values[count].map(r1 => `
 <tr>
-<td>${r1}</td>${values[count].map(r2 => `<td>${5 * r2 / (r1 + r2)}</td>`).join('')}
+<td>${r1}</td>${values[count].map(r2 => `<td>${(5 * r2 / (r1 + r2)).toFixed(3)}</td>`).join('')}
 </tr>
 `).join('\n')}
 </tbody>
